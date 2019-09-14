@@ -1,22 +1,26 @@
 import java.util.Scanner;
 public class Esfera{
 	Scanner read=new Scanner(System.in);
-	private float pi=3.1416;
+	public float pi=3.1416f;
 	public float Area;
 	public float Volumen;
 	public float radio;
 	private Esfera(){	//Constructor
-		Area=0;
-		Volumen=0;
-		System.out.print('Ingrese el radio de la esfera');
+		System.out.print("Ingrese el radio de la esfera\t");
 		radio=read.nextFloat();
+		Area=CalcularArea(radio);
+		Volumen=CalcularVolumen(radio);
 	}
 	public float CalcularArea(float r){
-		Area=4*pi*Math.pow(r,2);
+		Area=4*pi*((float)Math.pow(r,2));
 		return Area;
 	}
-	public float CalcularPerimetro(float r){
-		Volumen=(4/3)*pi*Math.pow(r,3);
+	public float CalcularVolumen(float r){
+		Volumen=(4/3)*pi*((float)Math.pow(r,3));
 		return Volumen;
+	}
+	public static void main(String[]args){
+	    Esfera esfera1=new Esfera();
+	    System.out.println("Area=" + esfera1.Area + "Volumen=" + esfera1.Volumen);
 	}
 }
