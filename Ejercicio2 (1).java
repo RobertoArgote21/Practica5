@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import CuerposCirculares.*;	//Importo el paquete donde se encuentra mi clase Esfera(en otro archivo)
 public class Ejercicio2 {
 	public static void main(String args[]){
 		Scanner sc = new Scanner(System.in);
@@ -7,7 +8,7 @@ public class Ejercicio2 {
 			int opc,opcion;
 			System.out.println("Ingrese de que figura quiere calcular el area superficial y su volumen");
 			System.out.println(1 +"para prisma");
-			System.out.println(2 + "para circunferencia");
+			System.out.println(2 + "para esfera");
 			System.out.println(3 + "para cono");
 			opc = sc.nextInt();
 			switch(opc){
@@ -15,9 +16,9 @@ public class Ejercicio2 {
 
 					break;
 				case 2:
-
+	    				Esfera esfera1=new Esfera();
+	    				System.out.println("Area Esfera= " + esfera1.Area + "\nVolumen Esfera= " + esfera1.Volumen);
 					break;
-
 				case 3:
 
 					break;
