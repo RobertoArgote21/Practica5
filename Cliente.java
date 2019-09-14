@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import CuerposCirculares.*;	//Importo el paquete donde se encuentra mi clase Esfera(en otro archivo)
-public class Ejercicio2 {
+public class Cliente {
 	public static void main(String args[]){
 		Scanner sc = new Scanner(System.in);
 
@@ -26,19 +26,9 @@ public class Ejercicio2 {
 				default:
 
 			}
-
-
-
-
-
-
-
-
 			System.out.println("¿Quiere repetir el programa? Pulse 1");
 
 		}while (opcion == 1);
-
-
 
 	} 
 }
