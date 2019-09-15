@@ -7,8 +7,8 @@ public class Prisma {
     public float h;
     public float area;
     public float volumen;
-    private Prisma(){
-        System.out.println("Ingrese la medida de una arista de la base: ");
+    public Prisma(){
+        System.out.println("\nIngrese la medida de una arista de la base: ");
         a=sc.nextFloat();
         System.out.println("Ingrese la medida de la otra arista: ");
         b=sc.nextFloat();
@@ -16,7 +16,7 @@ public class Prisma {
         h=sc.nextFloat();
         area=calcularArea(a, b, h);
         volumen = calcularVolumen(a, b, h);
-        
+        System.out.println("\nArea= "+area+"\nVolumen= "+volumen);
     }
     private float calcularVolumen(float a, float b, float h){
         return a*b*h;
@@ -24,9 +24,11 @@ public class Prisma {
     private float calcularArea(float a, float b, float h){
         return 2*(a*b)+2*(a*h)+2*(b*h);
     }
-    public static void main(String[] args) {
+    
+    /*public static void main(String[] args) {
         Prisma p = new Prisma();
         System.out.println("Area=" + p.area + "\nVolumen=" + p.volumen);
-    }
+    }*/
+    //
     
 }
